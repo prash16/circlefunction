@@ -1,6 +1,3 @@
-
-
-
 circle <- function(radius=2)
 {
 
@@ -15,19 +12,18 @@ circle <- function(radius=2)
 	return(me)
 }
 
-foobar <- circle(5)
 
 
 # Diameter Generic Method
 
-find.diameter <- function(circlediameter)
+find.diameter <- function(acircle)
 {
-	UseMethod("find.diameter",circlediameter)
+	UseMethod("find.diameter",acircle)
 }
 
 # Diameter Default Method
 
-find.diameter.default <- function(circlediameter)
+find.diameter.default <- function(acircle)
 {
 	stop("This shape is of an unknown class. Cannot find diameter")
 }
@@ -35,36 +31,33 @@ find.diameter.default <- function(circlediameter)
 # Diameter  circle Method
 
 
-find.diameter.circle <- function(circlediameter)
+find.diameter.circle <- function(acircle)
 {
-	return(circlediameter$radius * 2)
+	return(acircle$radius * 2)
 }
-
-foobar <- circle(5)
-find.diameter(foobar)
 
 
 
 # Area Generic Method
 
-find.area <- function(circlearea)
+find.area <- function(acircle)
 {
-	UseMethod("find.area",circlearea)
+	UseMethod("find.area",acircle)
 }
 
 
 # Area Default Method
 
-find.area.default <- function(circlearea)
+find.area.default <- function(acircle)
 {
 	stop("This shape is of an unknown class. Cannot find diameter")
 }
 
 # Area  triangle Method
 
-find.area.circle <- function(circlearea)
+find.area.circle <- function(acircle)
 {
-	return( 3.141592654 * circlediameter$radius ^ 2)
+	return( 3.141592654 * acircle$radius ^ 2)
 }
 
 
@@ -72,24 +65,22 @@ find.area.circle <- function(circlearea)
 
 # Perimeter Generic Method
 
-find.perimeter <- function(circleperimeter)
+find.perimeter <- function(acircle)
 {
-	UseMethod("find.perimeter",circleperimeter)
+	UseMethod("find.perimeter",acircle)
 }
 
 
 # Perimeter Default Method
 
-find.perimeter.default <- function(circleperimeter)
+find.perimeter.default <- function(acircle)
 {
 	stop("This shape is of an unknown class. Cannot find diameter")
 }
 
 # perimeter  triangle Method
 
-find.perimeter.circle <- function(circleperimeter)
+find.perimeter.circle <- function(acircle)
 {
-	return(2 * 3.141592654 * circlediameter$radius)
+	return(2 * 3.141592654 * acircle$radius)
 }
-
-
