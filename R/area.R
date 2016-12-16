@@ -37,7 +37,7 @@ find.diameter.default <- function(circlediameter)
 
 find.diameter.circle <- function(circlediameter)
 {
-	return(circlediameter$radius*2)
+
 }
 
 foobar <- circle(5)
@@ -64,7 +64,7 @@ find.area.default <- function(circlearea)
 
 find.area.circle <- function(circlearea)
 {
-	return(circlearea$radius^2*pi)
+
 }
 
 
@@ -89,13 +89,7 @@ find.perimeter.default <- function(circleperimeter)
 
 find.perimeter.circle <- function(circleperimeter)
 {
-	return(circleperimeter$radius*2*pi)
+
 }
 
-
-
-foobar <- circle(5)
-find.diameter(foobar)
-find.area(foobar)
-find.perimeter(foobar)
 
